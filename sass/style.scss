@@ -22,7 +22,7 @@ body {
         background-color: $bgColor;
         max-width: 100%;
         overflow-x: hidden;
-        scroll-snap-type: y proximity;
+        scroll-snap-type: y mandatory;
         overflow-y: scroll;
         scroll-behavior: smooth;
 

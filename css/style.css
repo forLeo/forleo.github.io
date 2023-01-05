@@ -14,8 +14,8 @@ body .container {
   background-color: #222222;
   max-width: 100%;
   overflow-x: hidden;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
