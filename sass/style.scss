@@ -1,0 +1,149 @@
+/* variables */
+$bgColor: #222222;
+
+$bgSection1: #222222;
+$bgSection2: #222122;
+$bgSection3: #222022;
+$bgSection4: #222122;
+
+/* Styling body with snapping scroll and other HTML tags*/
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: $bgColor;
+    color: azure;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    
+
+    .container {
+        width: 100%;
+        height: 100%;
+        background-color: $bgColor;
+        max-width: 100%;
+        overflow-x: hidden;
+        scroll-snap-type: y proximity;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+
+        section {
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+
+            &:nth-of-type(1)
+            {
+                background-color: $bgSection1;
+            }
+
+            &:nth-of-type(2)
+            {
+                background-color: $bgSection2;
+            }
+
+            &:nth-of-type(3)
+            {
+                background-color: $bgSection3;
+            }
+
+            &:nth-of-type(4)
+            {
+                background-color: $bgSection4;
+            }
+        }
+    }
+}
+
+p {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    color: azure;
+}
+
+.center
+{
+    text-align: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    text-decoration: double;
+}
+
+table ,td {
+    text-align: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0em;
+    padding-right: 1em;
+}
+
+th {
+    text-align: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0em;
+    font-size: 2.5em;
+}
+
+/* remove scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* top padding */
+.topPadding {
+    padding-top: 5em;
+}
+
+/* change location table style */
+.location {
+    display: inline-block;
+    font-size: 2.5em;
+}
+
+/* footer div classes */
+.footer {
+    max-width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+    position: fixed;
+    background-color: #1d1d1d;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0.35em;
+}
+
+.socials {
+    padding-left: 0.187em;
+    align-self: center;
+}
+
+/* typewriter effect */
+.inline {
+    display: inline-block;
+}
+
+.typewriter {
+    overflow: clip;
+    text-overflow: clip;
+    white-space: nowrap;
+    animation: typing 1.0187s forwards, blinking 0.5s step-end infinite alternate;
+    border-right: 0.25em solid orange;
+}
+@keyframes typing {
+    from {width: 0%}
+    to {width: 100%}
+}
+@keyframes blinking {
+    50% {
+        border-color: $bgSection1;
+    }
+}
